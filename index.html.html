@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anderson José - Soluções Administrativas | Atendimento 100% Online</title>
+    <meta name="description" content="Seu parceiro na organização e no crescimento do seu negócio! Atendimento 100% online em todo o Brasil: secretaria digital, financeiro, MEI, notas fiscais e suporte administrativo remoto.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome para ícones profissionais -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Configuração de Cores e Fontes Customizadas -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            950: '#050a14',
+                            900: '#070d19',
+                            800: '#0b162a',
+                            700: '#122342',
+                            600: '#1b335e',
+                        },
+                        gold: {
+                            300: '#fbe38e',
+                            400: '#f5d061',
+                            500: '#d4af37',
+                            600: '#b59124',
+                            700: '#8c6d14',
+                        }
+                    },
+                    boxShadow: {
+                        'gold-glow': '0 0 25px rgba(212, 175, 55, 0.25)',
+                        'gold-card': '0 10px 30px -10px rgba(0, 0, 0, 0.7), 0 0 15px rgba(212, 175, 55, 0.1)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Gradientes metálicos e texturas sutis */
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #fbe38e 0%, #d4af37 50%, #b59124 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gold-bg-gradient {
+            background: linear-gradient(135deg, #f5d061 0%, #d4af37 55%, #b59124 100%);
+        }
+
+        .gold-bg-gradient:hover {
+            background: linear-gradient(135deg, #fbe38e 0%, #e0bc46 55%, #c49e2b 100%);
+        }
+
+        .hero-pattern {
+            background-color: #070d19;
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 85% 75%, rgba(27, 51, 94, 0.45) 0%, transparent 50%),
+                linear-gradient(180deg, rgba(7, 13, 25, 0.92) 0%, rgba(11, 22, 42, 0.98) 100%);
+        }
+
+        .service-card {
+            background: linear-gradient(160deg, rgba(18, 35, 66, 0.75) 0%, rgba(7, 13, 25, 0.92) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.22);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(245, 208, 97, 0.65);
+            box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), 0 0 22px rgba(212, 175, 55, 0.2);
+        }
+
+        /* Animação suave no botão flutuante */
+        @keyframes pulse-ring {
+            0% { transform: scale(0.95); opacity: 0.7; }
+            70% { transform: scale(1.25); opacity: 0; }
+            100% { transform: scale(1.25); opacity: 0; }
+        }
+        .whatsapp-pulse::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background-color: #22c55e;
+            z-index: -1;
+            animation: pulse-ring 2.2s infinite;
+        }
+    </style>
+</head>
+<body class="bg-navy-900 text-slate-100 font-sans antialiased selection:bg-gold-500 selection:text-navy-950 overflow-x-hidden">
+
+    <!-- ==================== 1. HEADER / NAVEGAÇÃO FIXA ==================== -->
+    <header class="sticky top-0 z-50 bg-navy-950/90 backdrop-blur-md border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logotipo Monograma AJ + Título -->
+                <a href="#inicio" class="flex items-center gap-3 group focus:outline-none">
+                    <!-- SVG Logo AJ com Gráfico Ascendente -->
+                    <div class="w-12 h-12 rounded-full bg-navy-800 border-2 border-gold-500 flex items-center justify-center shadow-gold-glow group-hover:scale-105 transition-transform shrink-0">
+                        <svg viewBox="0 0 64 64" class="w-8 h-8" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <!-- Barras do Gráfico -->
+                            <rect x="23" y="34" width="4" height="10" rx="1" fill="#d4af37"/>
+                            <rect x="30" y="29" width="4" height="15" rx="1" fill="#f5d061"/>
+                            <rect x="37" y="23" width="4" height="21" rx="1" fill="#d4af37"/>
+                            <!-- Letra A estilizada e Seta -->
+                            <path d="M16 44L29 15L35 28" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M13 37C22 35 33 28 46 15M46 15H38M46 15V23" stroke="#f5d061" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <text x="32" y="57" text-anchor="middle" fill="#f5d061" font-family="Plus Jakarta Sans, sans-serif" font-weight="800" font-size="13" letter-spacing="1.5">AJ</text>
+                        </svg>
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="font-display font-extrabold text-white text-base sm:text-lg leading-tight tracking-tight">
+                            Anderson José
+                        </span>
+                        <span class="text-xs sm:text-sm font-semibold gold-text-gradient tracking-wide">
+                            Soluções Administrativas
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Links de Navegação (Desktop) -->
+                <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                    <a href="#diferenciais" class="hover:text-gold-400 transition-colors">Diferenciais</a>
+                    <a href="#servicos" class="hover:text-gold-400 transition-colors">Serviços</a>
+                    <a href="#como-funciona" class="hover:text-gold-400 transition-colors">Como Funciona</a>
+                    <a href="#contato" class="hover:text-gold-400 transition-colors">Contato</a>
+                </nav>
+
+                <!-- Botão CTA WhatsApp no Header -->
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Vi%20sua%20p%C3%A1gina%20de%20Solu%C3%A7%C3%B5es%20Administrativas%20e%20gostaria%20de%20saber%20mais." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-xs sm:text-sm shadow-lg shadow-emerald-950/50 transition-all hover:scale-105">
+                        <i class="fa-brands fa-whatsapp text-lg"></i>
+                        <span class="hidden sm:inline">Fale Conosco</span>
+                        <span class="sm:hidden">WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== 2. HERO SECTION ==================== -->
+    <section id="inicio" class="hero-pattern relative pt-12 pb-20 sm:pt-20 sm:pb-28 border-b border-gold-500/20 overflow-hidden">
+        <!-- Detalhe decorativo de brilho dourado -->
+        <div class="absolute -top-24 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Coluna de Texto Principal -->
+                <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+                    <!-- Selo Atendimento 100% Online -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-gold-500/15 border border-gold-400/40 text-gold-300 text-xs sm:text-sm font-semibold shadow-gold-glow">
+                        <span class="w-2.5 h-2.5 rounded-full bg-gold-400 animate-pulse"></span>
+                        <i class="fa-solid fa-globe text-gold-400"></i>
+                        <span>Atendimento 100% Online em todo o Brasil</span>
+                    </div>
+
+                    <!-- Título Principal (Headline) -->
+                    <h1 class="font-display font-extrabold text-3xl sm:text-5xl lg:text-[3.25rem] text-white leading-[1.15] tracking-tight">
+                        Seu parceiro na <span class="gold-text-gradient">organização</span> e no <span class="gold-text-gradient">crescimento</span> do seu negócio!
+                    </h1>
+
+                    <!-- Subtítulo de Proposta de Valor -->
+                    <p class="text-slate-300 text-base sm:text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                        Terceirize suas rotinas administrativas, financeiras e operacionais com segurança, agilidade e custo acessível. Tenha mais tempo livre para vender e atender seus clientes sem precisar contratar equipe presencial.
+                    </p>
+
+                    <!-- Botões de Ação (CTAs) -->
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Quero%20organizar%20a%20rotina%20do%20meu%20neg%C3%B3cio%20e%20solicitar%20um%20or%C3%A7amento." 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-7 py-4 rounded-xl gold-bg-gradient text-navy-950 font-display font-bold text-base shadow-gold-glow transition-all hover:scale-[1.03]">
+                            <i class="fa-brands fa-whatsapp text-xl"></i>
+                            <span>Solicitar Orçamento no WhatsApp</span>
+                        </a>
+
+                        <a href="#servicos" 
+                           class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-xl bg-navy-800/90 hover:bg-navy-700 text-white border border-gold-500/40 font-semibold text-base transition-all">
+                            <span>Conhecer os Serviços</span>
+                            <i class="fa-solid fa-arrow-down text-gold-400 text-sm"></i>
+                        </a>
+                    </div>
+
+                    <!-- Micro-prova de confiança -->
+                    <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 text-xs sm:text-sm text-slate-400">
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold-400"></i> Ideal para MEIs e Pequenas Empresas</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold-400"></i> Sem encargos trabalhistas</span>
+                        <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-gold-400"></i> Suporte ágil pelo WhatsApp</span>
+                    </div>
+                </div>
+
+                <!-- Coluna Visual / Cartão de Destaque Corporativo -->
+                <div class="lg:col-span-5">
+                    <div class="relative rounded-2xl bg-gradient-to-b from-navy-800 to-navy-950 border border-gold-500/35 p-6 sm:p-8 shadow-gold-card">
+                        <!-- Badge no canto superior -->
+                        <div class="flex items-center justify-between border-b border-gold-500/20 pb-5 mb-6">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl gold-bg-gradient flex items-center justify-center text-navy-950 font-display font-extrabold text-xl shadow-md">
+                                    AJ
+                                </div>
+                                <div>
+                                    <h2 class="font-display font-bold text-white text-lg">Anderson José</h2>
+                                    <p class="text-xs text-gold-400 font-medium">Soluções Administrativas Remotas</p>
+                                </div>
+                            </div>
+                            <span class="px-3 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-400 text-xs font-semibold flex items-center gap-1.5">
+                                <span class="w-2 h-2 rounded-full bg-emerald-400"></span> Online
+                            </span>
+                        </div>
+
+                        <!-- Resumo de Áreas Atendidas -->
+                        <div class="space-y-3.5 mb-6">
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-navy-900/80 border border-white/5">
+                                <div class="w-9 h-9 rounded-lg bg-gold-500/15 text-gold-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-headset"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-white">Secretaria Digital & Atendimento</p>
+                                    <p class="text-xs text-slate-400">WhatsApp, e-mails, agendas e compromissos</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-navy-900/80 border border-white/5">
+                                <div class="w-9 h-9 rounded-lg bg-gold-500/15 text-gold-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-white">Financeiro, Notas Fiscais & MEI</p>
+                                    <p class="text-xs text-slate-400">Planilhas, DAS, pendências e organização fiscal</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 rounded-xl bg-navy-900/80 border border-white/5">
+                                <div class="w-9 h-9 rounded-lg bg-gold-500/15 text-gold-400 flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-semibold text-white">Operacional, DP & Documentos</p>
+                                    <p class="text-xs text-slate-400">Compras, estoque, arquivos digitais e apoio remoto</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rodapé do Card com Contato Direto -->
+                        <div class="pt-4 border-t border-gold-500/20 flex items-center justify-between">
+                            <div>
+                                <span class="text-xs text-slate-400 block">WhatsApp Comercial</span>
+                                <span class="font-display font-bold text-gold-400 text-base sm:text-lg">(31) 98585-4150</span>
+                            </div>
+                            <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20seus%20servi%C3%A7os%20administrativos." 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs sm:text-sm font-bold transition-colors flex items-center gap-2">
+                                <i class="fa-brands fa-whatsapp text-base"></i> Chamar Agora
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 3. BARRA DOS 4 PILARES DE CONFIANÇA ==================== -->
+    <section id="diferenciais" class="bg-navy-950 py-10 border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Pilar 1 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-navy-900/90 border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0 shadow-md">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">Compromisso e Responsabilidade</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Prazos respeitados e dedicação total</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-navy-900/90 border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0 shadow-md">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">Agilidade no Atendimento</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Respostas rápidas e execução sem enrolação</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-navy-900/90 border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0 shadow-md">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">Confidencialidade dos Seus Dados</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Sigilo absoluto sobre informações e documentos</p>
+                    </div>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="flex items-center gap-4 p-4 rounded-2xl bg-navy-900/90 border border-gold-500/20">
+                    <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0 shadow-md">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-display font-bold text-white text-sm sm:text-base leading-snug">Soluções Práticas e Eficientes</h3>
+                        <p class="text-xs text-slate-400 mt-0.5">Processos simples que funcionam no dia a dia</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 4. GRADE COMPLETA DOS 9 SERVIÇOS ==================== -->
+    <section id="servicos" class="py-20 sm:py-24 bg-navy-900 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Cabeçalho da Seção -->
+            <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-400 text-xs font-bold uppercase tracking-wider">
+                    Portfólio Completo
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                    Soluções Administrativas Sob Medida
+                </h2>
+                <p class="text-slate-300 text-base sm:text-lg">
+                    Escolha a área em que você precisa de apoio hoje. Você pode contratar um serviço pontual ou montar um pacote mensal personalizado para a rotina do seu negócio.
+                </p>
+            </div>
+
+            <!-- Grid de 9 Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+
+                <!-- SERVIÇO 1: Atendimento e Secretaria Digital -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-headset"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Atendimento e Secretaria Digital
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Respostas por WhatsApp, e-mail e telefone</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Agendamento de compromissos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Organização de agendas</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Atendimento%20e%20Secretaria%20Digital." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 2: Planilhas e Controle Financeiro -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-chart-column"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Planilhas e Controle Financeiro
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Contas a pagar e a receber</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Controle de pagamentos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Relatórios simples</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Planilhas%20e%20Controle%20Financeiro." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 3: Apoio com Notas Fiscais -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Apoio com Notas Fiscais
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Orientação operacional</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Organização de notas</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Cadastro de informações</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Apoio%20com%20Notas%20Fiscais." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 4: Apoio Administrativo para MEI -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-store"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Apoio Administrativo para MEI
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Consulta de situação e pendências</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Orientação para emitir o DAS</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Organização de documentos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Suporte nos procedimentos (abertura, alteração e baixa)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Apoio%20Administrativo%20para%20MEI." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 5: Departamento Pessoal (Apoio) -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Departamento Pessoal (Apoio)
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Cadastro de funcionários</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Controle de ponto e férias</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Organização de documentos</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Apoio%20em%20Departamento%20Pessoal." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 6: Compras, Estoque e Logística -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-cart-flatbed"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Compras, Estoque e Logística
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Cotações e pedidos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Controle de estoque</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Acompanhamento de entregas</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Compras%2C%20Estoque%20e%20Log%C3%ADstica." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 7: Informática e Documentos Digitais -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-laptop-file"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Informática e Documentos Digitais
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Criação de planilhas e documentos</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Conversão de arquivos em PDF</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Organização de pastas e Drive</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Páginas simples em HTML</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Inform%C3%A1tica%20e%20Documentos%20Digitais." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 8: Marketing e Apoio Digital -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-bullhorn"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Marketing e Apoio Digital
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Textos para redes sociais</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Criação de artes simples</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Agendamento de publicações</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Organização de calendário</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Marketing%20e%20Apoio%20Digital." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+                <!-- SERVIÇO 9: Suporte Administrativo Remoto -->
+                <article class="service-card rounded-2xl p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-5 pb-4 border-b border-gold-500/20">
+                            <div class="w-12 h-12 rounded-xl gold-bg-gradient text-navy-950 flex items-center justify-center text-xl shrink-0">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <h3 class="font-display font-bold text-lg text-gold-400 leading-snug">
+                                Suporte Administrativo Remoto
+                            </h3>
+                        </div>
+                        <ul class="space-y-3 text-sm text-slate-200 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Controle de tarefas e pendências</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Acompanhamento de solicitações</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i class="fa-solid fa-circle-check text-gold-400 mt-1 shrink-0"></i>
+                                <span>Soluções personalizadas para o seu negócio</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tenho%20interesse%20no%20servi%C3%A7o%20de%20Suporte%20Administrativo%20Remoto." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-gold-500 text-gold-400 hover:text-navy-950 border border-gold-500/40 font-semibold text-sm transition-all flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-base"></i>
+                        <span>Solicitar este serviço</span>
+                    </a>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 5. COMO FUNCIONA O ATENDIMENTO ONLINE ==================== -->
+    <section id="como-funciona" class="py-20 bg-navy-950 border-t border-b border-gold-500/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <span class="inline-block px-3.5 py-1 rounded-full bg-gold-500/15 border border-gold-500/30 text-gold-400 text-xs font-bold uppercase tracking-wider">
+                    Simples e Prático
+                </span>
+                <h2 class="font-display font-extrabold text-3xl sm:text-4xl text-white">
+                    Como Funciona o Atendimento Online
+                </h2>
+                <p class="text-slate-300 text-base">
+                    Sem burocracia e sem custos fixos de contratação. Em 3 passos você coloca a gestão do seu dia a dia em ordem:
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Passo 1 -->
+                <div class="relative rounded-2xl bg-navy-900 border border-gold-500/25 p-8 text-center">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-2xl gold-bg-gradient text-navy-950 font-display font-extrabold text-2xl flex items-center justify-center shadow-gold-glow">
+                        1
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mb-3">
+                        Diagnóstico rápido pelo WhatsApp
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Você me conta quais tarefas estão tomando seu tempo ou quais pendências precisa resolver primeiro. Sem compromisso.
+                    </p>
+                </div>
+
+                <!-- Passo 2 -->
+                <div class="relative rounded-2xl bg-navy-900 border border-gold-500/25 p-8 text-center">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-2xl gold-bg-gradient text-navy-950 font-display font-extrabold text-2xl flex items-center justify-center shadow-gold-glow">
+                        2
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mb-3">
+                        Plano de rotina personalizado
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Definimos juntos as prioridades, ferramentas de acesso e o formato ideal (demanda pontual ou acompanhamento recorrente).
+                    </p>
+                </div>
+
+                <!-- Passo 3 -->
+                <div class="relative rounded-2xl bg-navy-900 border border-gold-500/25 p-8 text-center">
+                    <div class="w-14 h-14 mx-auto mb-5 rounded-2xl gold-bg-gradient text-navy-950 font-display font-extrabold text-2xl flex items-center justify-center shadow-gold-glow">
+                        3
+                    </div>
+                    <h3 class="font-display font-bold text-xl text-white mb-3">
+                        Execução remota com confidencialidade e relatórios
+                    </h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Assumo as rotinas acordadas com sigilo total, organização digital e atualizações claras para você acompanhar tudo com tranquilidade.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. CHAMADA FINAL PARA AÇÃO (CTA) ==================== -->
+    <section id="contato" class="py-20 sm:py-24 bg-gradient-to-b from-navy-900 to-navy-950 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="rounded-3xl bg-gradient-to-r from-navy-800 via-navy-900 to-navy-800 border-2 border-gold-500/45 p-8 sm:p-12 lg:p-14 text-center shadow-gold-card">
+                
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-500/15 border border-gold-400/40 text-gold-300 text-xs sm:text-sm font-semibold mb-6">
+                    <i class="fa-solid fa-clock text-gold-400"></i>
+                    <span>Atendimento em todo o Brasil • Resposta rápida</span>
+                </div>
+
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl text-white leading-tight mb-4">
+                    Organize sua rotina, <span class="gold-text-gradient">foque no seu negócio!</span>
+                </h2>
+
+                <p class="text-gold-300 font-semibold text-base sm:text-xl tracking-wide mb-8">
+                    Mais organização &bull; Mais produtividade &bull; Mais tempo para o que realmente importa!
+                </p>
+
+                <!-- Botão Principal Verde + Dourado -->
+                <div class="flex flex-col items-center justify-center gap-4">
+                    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Tire%20minhas%20d%C3%BAvidas%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento." 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       class="group inline-flex items-center gap-4 px-7 sm:px-10 py-4 sm:py-5 rounded-2xl bg-gradient-to-r from-emerald-600 to-emerald-500 hover:from-emerald-500 hover:to-emerald-400 border-2 border-gold-400/80 text-white shadow-2xl transition-all hover:scale-[1.03]">
+                        <div class="w-12 h-12 rounded-full bg-white text-emerald-600 flex items-center justify-center text-2xl sm:text-3xl shrink-0 shadow-md">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <div class="text-left">
+                            <span class="block font-display font-extrabold text-lg sm:text-2xl leading-none">
+                                Fale Conosco!
+                            </span>
+                            <span class="block text-xs sm:text-sm text-emerald-50 mt-1">
+                                Tire suas dúvidas e solicite um orçamento
+                            </span>
+                            <span class="block font-display font-extrabold text-gold-300 text-base sm:text-xl mt-1">
+                                (31) 98585-4150
+                            </span>
+                        </div>
+                    </a>
+
+                    <!-- Botão secundário para copiar o telefone -->
+                    <button type="button" 
+                            onclick="copiarTelefone()" 
+                            class="mt-2 inline-flex items-center gap-2 text-xs sm:text-sm text-slate-300 hover:text-gold-400 transition-colors py-2 px-4 rounded-lg bg-navy-950/60 border border-white/10">
+                        <i class="fa-regular fa-copy"></i>
+                        <span id="texto-copiar">Copiar número: (31) 98585-4150</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RODAPÉ ==================== -->
+    <footer class="bg-navy-950 border-t border-gold-500/20 py-10 text-center sm:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 rounded-full bg-navy-800 border border-gold-500 flex items-center justify-center font-display font-bold text-gold-400 text-sm">
+                    AJ
+                </div>
+                <div>
+                    <p class="font-display font-bold text-white text-sm">Anderson José - Soluções Administrativas</p>
+                    <p class="text-xs text-slate-400">Atendimento 100% Online em todo o Brasil</p>
+                </div>
+            </div>
+
+            <p class="text-xs text-slate-400">
+                &copy; <span id="ano-atual"></span> Anderson José - Soluções Administrativas. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ==================== BOTÃO FLUTUANTE DO WHATSAPP ==================== -->
+    <a href="https://wa.me/5531985854150?text=Ol%C3%A1%20Anderson!%20Vim%20pelo%20seu%20site%20e%20gostaria%20de%20um%20or%C3%A7amento." 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Falar pelo WhatsApp"
+       class="whatsapp-pulse fixed bottom-6 right-6 z-50 w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-3xl shadow-2xl transition-transform hover:scale-110">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== SCRIPTS INTERATIVOS ==================== -->
+    <script>
+        // Atualiza automaticamente o ano no rodapé
+        document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
+        // Função para copiar o número de WhatsApp com aviso visual (sem alert)
+        function copiarTelefone() {
+            const numero = '(31) 98585-4150';
+            const inputTemp = document.createElement('input');
+            inputTemp.value = numero;
+            document.body.appendChild(inputTemp);
+            inputTemp.select();
+            document.execCommand('copy');
+            document.body.removeChild(inputTemp);
+
+            const label = document.getElementById('texto-copiar');
+            const textoOriginal = label.textContent;
+            label.textContent = 'Número copiado: (31) 98585-4150!';
+            label.classList.add('text-emerald-400', 'font-semibold');
+
+            setTimeout(() => {
+                label.textContent = textoOriginal;
+                label.classList.remove('text-emerald-400', 'font-semibold');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
